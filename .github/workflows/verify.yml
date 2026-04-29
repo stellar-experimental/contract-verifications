@@ -10,7 +10,7 @@ permissions: {}
 env:
   # Pin stellar-cli to the head of stellar/stellar-cli#2525 (build verify command).
   # Bump this SHA as the PR is updated, or replace with a release tag once merged.
-  STELLAR_CLI_REV: 4ab95bf92fa00d119b325749dad5071d0254042e
+  STELLAR_CLI_REV: fa4a1f5b3f9c228125e6cf417e797bd81d045556
   WASMS_REPO: stellar-experimental/contract-wasms
 
 jobs:
@@ -119,41 +119,60 @@ jobs:
           REPO: ${{ steps.meta.outputs.source_repo }}
           REV: ${{ steps.meta.outputs.source_rev }}
         run: |
-          set -euo pipefail
-          git clone "$REPO" /tmp/source
-          git -C /tmp/source checkout "$REV"
+          ( git clone "$REPO" /tmp/source && git -C /tmp/source checkout "$REV" ) 2>&1 | tee /tmp/clone.log
 
       - name: Run build verify
         id: verify
         if: steps.clone.outcome == 'success'
         continue-on-error: true
+        working-directory: /tmp/source
         env:
           HASH: ${{ matrix.item.hash }}
         run: |
           stellar contract build verify \
             --wasm-hash "$HASH" \
             --network mainnet \
-            --source /tmp/source
+            2>&1 | tee /tmp/verify.log
 
       - name: Build verification record
         env:
           HASH: ${{ matrix.item.hash }}
           META_JSON: ${{ steps.meta.outputs.meta_json }}
+          SOURCE_REPO: ${{ steps.meta.outputs.source_repo }}
+          SOURCE_REV: ${{ steps.meta.outputs.source_rev }}
+          CLONE_OUTCOME: ${{ steps.clone.outcome }}
           VERIFY_OUTCOME: ${{ steps.verify.outcome }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           set -euo pipefail
+          strip_ansi() { sed -E 's/\x1B\[[0-9;]*[a-zA-Z]//g'; }
           if [ "$VERIFY_OUTCOME" = "success" ]; then
             verified=true
+            err_text=""
+          elif [ "$VERIFY_OUTCOME" = "failure" ]; then
+            verified=false
+            err_text=$(strip_ansi < /tmp/verify.log)
+          elif [ "$CLONE_OUTCOME" = "failure" ]; then
+            verified=false
+            err_text=$(strip_ansi < /tmp/clone.log)
+          elif [ -z "$SOURCE_REPO" ] && [ -z "$SOURCE_REV" ]; then
+            verified=false
+            err_text="wasm meta missing source_repo and source_rev"
+          elif [ -z "$SOURCE_REPO" ]; then
+            verified=false
+            err_text="wasm meta missing source_repo"
           else
             verified=false
+            err_text="wasm meta missing source_rev"
           fi
+          printf '%s' "$err_text" > /tmp/err.txt
           jq -n \
             --arg hash "$HASH" \
             --argjson verified "$verified" \
             --arg run "$RUN_URL" \
+            --rawfile err /tmp/err.txt \
             --argjson meta "$META_JSON" \
-            '{"wasm-hash": $hash, "build-verified": $verified, "run": $run, "meta": $meta}' \
+            '{"wasm-hash": $hash, "build-verified": $verified, "error": (if $verified then null else $err end), "run": $run, "meta": $meta}' \
             > "${HASH}.json"
           cat "${HASH}.json"
 
