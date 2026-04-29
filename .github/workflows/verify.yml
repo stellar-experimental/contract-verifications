@@ -21,6 +21,7 @@ jobs:
     outputs:
       matrix: ${{ steps.build.outputs.matrix }}
       has_work: ${{ steps.build.outputs.has_work }}
+      wasms_sha: ${{ steps.build.outputs.wasms_sha }}
     steps:
       - uses: actions/checkout@v5
       - name: Clone wasms repo
@@ -29,6 +30,7 @@ jobs:
         id: build
         run: |
           set -euo pipefail
+          wasms_sha=$(git -C /tmp/wasms rev-parse HEAD)
           items='[]'
           shopt -s nullglob
           for f in /tmp/wasms/contracts/*.wasm; do
@@ -42,8 +44,9 @@ jobs:
           # GitHub Actions caps matrix expansion at 256 jobs per run.
           items=$(jq -c '.[0:256]' <<<"$items")
           count=$(jq 'length' <<<"$items")
-          echo "Discovered $count wasms to verify"
+          echo "Discovered $count wasms to verify (pinned to ${wasms_sha})"
           echo "matrix=$items" >> "$GITHUB_OUTPUT"
+          echo "wasms_sha=$wasms_sha" >> "$GITHUB_OUTPUT"
           if [ "$count" -gt 0 ]; then
             echo "has_work=true" >> "$GITHUB_OUTPUT"
           else
@@ -60,16 +63,17 @@ jobs:
       matrix:
         item: ${{ fromJSON(needs.discover.outputs.matrix) }}
     steps:
-      - name: Clone wasms repo
-        run: git clone --depth 1 "https://github.com/${WASMS_REPO}" /tmp/wasms
-
-      - name: Verify wasm file hash
+      - name: Download wasm
         env:
-          EXPECTED: ${{ matrix.item.hash }}
+          WASMS_SHA: ${{ needs.discover.outputs.wasms_sha }}
           FILE: ${{ matrix.item.file }}
+          EXPECTED: ${{ matrix.item.hash }}
         run: |
           set -euo pipefail
-          actual=$(sha256sum "/tmp/wasms/${FILE}" | cut -d' ' -f1)
+          mkdir -p /tmp/wasm
+          url="https://raw.githubusercontent.com/${WASMS_REPO}/${WASMS_SHA}/${FILE}"
+          curl -fsSL "$url" -o /tmp/wasm/contract.wasm
+          actual=$(sha256sum /tmp/wasm/contract.wasm | cut -d' ' -f1)
           if [ "$actual" != "$EXPECTED" ]; then
             echo "Hash mismatch: got $actual, expected $EXPECTED"
             exit 1
@@ -92,11 +96,9 @@ jobs:
 
       - name: Read wasm meta
         id: meta
-        env:
-          FILE: ${{ matrix.item.file }}
         run: |
           set -euo pipefail
-          meta_raw=$(stellar contract info meta --wasm "/tmp/wasms/${FILE}" || true)
+          meta_raw=$(stellar contract info meta --wasm /tmp/wasm/contract.wasm || true)
           # Convert key=value lines into a JSON object.
           meta_json=$(printf '%s\n' "$meta_raw" | jq -Rn '
             [inputs | select(length > 0) | capture("^(?<k>[^=]+)=(?<v>.*)$") | {(.k): .v}] | add // {}
