@@ -10,7 +10,7 @@ permissions: {}
 env:
   # Pin stellar-cli to the head of stellar/stellar-cli#2525 (build verify command).
   # Bump this SHA as the PR is updated, or replace with a release tag once merged.
-  STELLAR_CLI_REV: fa4a1f5b3f9c228125e6cf417e797bd81d045556
+  STELLAR_CLI_REV: c319deabcc859648d90accd22159305fd23d16e5
   WASMS_REPO: stellar-experimental/contract-wasms
 
 jobs:
@@ -115,12 +115,9 @@ jobs:
         if: steps.clone.outcome == 'success'
         continue-on-error: true
         working-directory: /tmp/source
-        env:
-          HASH: ${{ matrix.item.hash }}
         run: |
           stellar contract build verify \
-            --wasm-hash "$HASH" \
-            --network mainnet \
+            --wasm /tmp/wasm/contract.wasm \
             2>&1 | tee /tmp/verify.log
 
       - name: Build verification record

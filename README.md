@@ -14,7 +14,7 @@ A scheduled GitHub workflow ([`.github/workflows/verify.yml`](.github/workflows/
 3. For each remaining wasm, in an isolated matrix job with no token permissions:
    - Reads the wasm's contract metadata (looks up `source_repo` and `source_rev`).
    - Clones the source at that revision.
-   - Runs `stellar contract build verify --wasm-hash <hash> --network mainnet` from inside the cloned source (from [stellar/stellar-cli#2525](https://github.com/stellar/stellar-cli/pull/2525)).
+   - Runs `stellar contract build verify --wasm <local-wasm>` from inside the cloned source (from [stellar/stellar-cli#2525](https://github.com/stellar/stellar-cli/pull/2525)). Verify reads `bldimg`/`rsver`/`bldopt_*` from the wasm meta to drive the rebuild.
    - Uploads a JSON record as a workflow artifact.
 4. A separate job collects the artifacts and commits them to `verifications/`.
 
