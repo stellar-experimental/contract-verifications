@@ -89,11 +89,7 @@ jobs:
         id: meta
         run: |
           set -euo pipefail
-          meta_raw=$(stellar contract info meta --wasm /tmp/wasm/contract.wasm || true)
-          # Convert key=value lines into a JSON object.
-          meta_json=$(printf '%s\n' "$meta_raw" | jq -Rn '
-            [inputs | select(length > 0) | capture("^(?<k>[^=]+)=(?<v>.*)$") | {(.k): .v}] | add // {}
-          ')
+          meta_json=$(stellar contract info meta --wasm /tmp/wasm/contract.wasm --output json) || meta_json='{}'
           source_repo=$(jq -r '.source_repo // ""' <<<"$meta_json")
           source_rev=$(jq -r '.source_rev // ""' <<<"$meta_json")
           {
