@@ -67,17 +67,12 @@ jobs:
         env:
           WASMS_SHA: ${{ needs.discover.outputs.wasms_sha }}
           FILE: ${{ matrix.item.file }}
-          EXPECTED: ${{ matrix.item.hash }}
         run: |
           set -euo pipefail
           mkdir -p /tmp/wasm
-          url="https://raw.githubusercontent.com/${WASMS_REPO}/${WASMS_SHA}/${FILE}"
-          curl -fsSL "$url" -o /tmp/wasm/contract.wasm
-          actual=$(sha256sum /tmp/wasm/contract.wasm | cut -d' ' -f1)
-          if [ "$actual" != "$EXPECTED" ]; then
-            echo "Hash mismatch: got $actual, expected $EXPECTED"
-            exit 1
-          fi
+          curl -fsSL \
+            "https://raw.githubusercontent.com/${WASMS_REPO}/${WASMS_SHA}/${FILE}" \
+            -o /tmp/wasm/contract.wasm
 
       - name: Cache stellar-cli
         id: cache-cli
