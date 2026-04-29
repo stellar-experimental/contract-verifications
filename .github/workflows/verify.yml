@@ -21,7 +21,6 @@ jobs:
     outputs:
       matrix: ${{ steps.build.outputs.matrix }}
       has_work: ${{ steps.build.outputs.has_work }}
-      wasms_sha: ${{ steps.build.outputs.wasms_sha }}
     steps:
       - uses: actions/checkout@v5
       - name: Clone wasms repo
@@ -30,7 +29,6 @@ jobs:
         id: build
         run: |
           set -euo pipefail
-          wasms_sha=$(git -C /tmp/wasms rev-parse HEAD)
           items='[]'
           shopt -s nullglob
           for f in /tmp/wasms/contracts/*.wasm; do
@@ -44,9 +42,8 @@ jobs:
           # GitHub Actions caps matrix expansion at 256 jobs per run.
           items=$(jq -c '.[0:256]' <<<"$items")
           count=$(jq 'length' <<<"$items")
-          echo "Discovered $count wasms to verify (pinned to ${wasms_sha})"
+          echo "Discovered $count wasms to verify"
           echo "matrix=$items" >> "$GITHUB_OUTPUT"
-          echo "wasms_sha=$wasms_sha" >> "$GITHUB_OUTPUT"
           if [ "$count" -gt 0 ]; then
             echo "has_work=true" >> "$GITHUB_OUTPUT"
           else
@@ -65,13 +62,12 @@ jobs:
     steps:
       - name: Download wasm
         env:
-          WASMS_SHA: ${{ needs.discover.outputs.wasms_sha }}
           FILE: ${{ matrix.item.file }}
         run: |
           set -euo pipefail
           mkdir -p /tmp/wasm
           curl -fsSL \
-            "https://raw.githubusercontent.com/${WASMS_REPO}/${WASMS_SHA}/${FILE}" \
+            "https://raw.githubusercontent.com/${WASMS_REPO}/main/${FILE}" \
             -o /tmp/wasm/contract.wasm
 
       - name: Cache stellar-cli
