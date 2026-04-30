@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "6f9bcebefe68ff5ad6a25c45eae9cf26f0f160887c4dc04887c3c9b31ce5f86a",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25161524666",
+  "meta": {
+    "Description": "Junior tranche (last payout) backstop fund to cover pool liquidity deficits using user staked funds",
+    "rsver": "1.86.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}

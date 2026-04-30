@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "7a4e2b964aca487b8dcf0cb6c4e4f15468cfd1d121620e57a5773db21de4627b",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25161524666",
+  "meta": {
+    "rsver": "1.84.1",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8",
+    "source_repo": "Creit-Tech/Stellar-Router-Contract"
+  }
+}

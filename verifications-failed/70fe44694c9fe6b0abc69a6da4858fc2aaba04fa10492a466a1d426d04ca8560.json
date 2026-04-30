@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "70fe44694c9fe6b0abc69a6da4858fc2aaba04fa10492a466a1d426d04ca8560",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25161524666",
+  "meta": {
+    "title": "KaleFail Tractor",
+    "desc": "Harvest all available KALE for your farmer.",
+    "binver": "2.0.0",
+    "rsver": "1.85.1",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "8028bcee9217ea574227696c5b767e806d6d554fca4dd5c7b5214ee6470d6436",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25161524666",
+  "meta": {
+    "Description": "Phoenix Protocol Stable Liquidity Pool",
+    "rsver": "1.85.1",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}
