@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "23cafe79bb16a32098004aa2906e0de5b1fe63783f67a5c539f5dd5fc2746ae4",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25152643202",
+  "meta": {
+    "desc": "Splitter contract is used to distribute tokens to shareholders with predefined shares.",
+    "rsver": "1.93.0",
+    "rssdkver": "23.5.1#59fcef437260ed4da42d1efb357137a5c166c02e",
+    "source_repo": "github:Dobprotocol/stellar-distribution-contracts",
+    "home_domain": "dobprotocol.com"
+  }
+}

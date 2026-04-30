@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "25435367f418520019d7eaf257a9769413c68cb9f88c8ebe9c9a88605d1f66dd",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25152643202",
+  "meta": {
+    "Description": "Coopstable cUSD manager steward of the cusd token",
+    "rsver": "1.87.0",
+    "rssdkver": "22.0.8#f46e9e0610213bbb72285566f9dd960ff96d03d8"
+  }
+}

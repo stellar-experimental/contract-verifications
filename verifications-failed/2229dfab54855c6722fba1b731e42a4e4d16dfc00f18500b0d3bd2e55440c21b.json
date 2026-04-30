@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "2229dfab54855c6722fba1b731e42a4e4d16dfc00f18500b0d3bd2e55440c21b",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25152643202",
+  "meta": {
+    "rsver": "1.93.1",
+    "rssdkver": "23.5.1#59fcef437260ed4da42d1efb357137a5c166c02e",
+    "source_repo": "github:lumenbro/joule-contracts",
+    "home_domain": "lumenbro.com"
+  }
+}

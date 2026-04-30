@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "2651373152d7e6c451a0f55b6d739d3151fa4e58c2cc6290953efb65b4b06f15",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25152643202",
+  "meta": {
+    "Description": "Yield adapter registry for the Coopstable cUSD system",
+    "rsver": "1.87.0",
+    "rssdkver": "22.0.8#f46e9e0610213bbb72285566f9dd960ff96d03d8"
+  }
+}
