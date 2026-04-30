@@ -8,6 +8,13 @@ on:
 
 permissions: {}
 
+defaults:
+  run:
+    # GHA's implicit default is `bash -e` (no pipefail); explicitly setting
+    # `bash` upgrades it to `bash -eo pipefail` so command failures inside
+    # `cmd | tee ...` pipelines aren't silently masked by tee.
+    shell: bash
+
 env:
   # Pin stellar-cli to the head of stellar/stellar-cli#2525 (build verify command).
   # Bump this SHA as the PR is updated, or replace with a release tag once merged.
