@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "84a88013828d4c4f4e4f5d0fa2f686050d69889384a044eab3ec4b1169f810ea",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25163176777",
+  "meta": {
+    "desc": "Rain Card Coordinator Contract",
+    "binver": "1.0.0",
+    "rsver": "1.85.1",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}

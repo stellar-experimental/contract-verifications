@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "83729b530f49b5fcd9d9dca678437a50f6ecb9fc8cbc3241891c17b1b1bb1a42",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25163176777",
+  "meta": {
+    "rsver": "1.92.0",
+    "rssdkver": "23.4.1#e671b396f8bacf1370925f722df158b31c0baae5",
+    "cliver": "23.4.0#fc6745f3d4e90d1ef68d14d0ae947404768fa5c0",
+    "home_domain": "voltacircuit.com",
+    "source_repo": "github:VoltaHQ/smart-contract-soroban"
+  }
+}
