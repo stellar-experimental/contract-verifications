@@ -80,8 +80,14 @@ jobs:
       - name: Install stellar-cli
         if: steps.cache-cli.outputs.cache-hit != 'true'
         run: |
+          # Deps mirror stellar-cli's install.sh `--install-deps` apt list
+          # (https://github.com/stellar/stellar-cli/raw/main/install.sh).
+          # install.sh itself can't be used here because it pulls the latest
+          # release tarball, which doesn't yet include the `build verify`
+          # subcommand from PR #2525.
           sudo apt-get update
-          sudo apt-get install -y libdbus-1-dev pkg-config
+          sudo apt-get install -y \
+            libdbus-1-dev libudev-dev pkg-config libssl-dev build-essential
           cargo install --locked \
             --git https://github.com/stellar/stellar-cli \
             --rev "${STELLAR_CLI_REV}" \
