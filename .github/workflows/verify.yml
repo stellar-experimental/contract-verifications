@@ -16,9 +16,6 @@ defaults:
     shell: bash
 
 env:
-  # Pin stellar-cli to the head of stellar/stellar-cli#2525 (build verify command).
-  # Bump this SHA as the PR is updated, or replace with a release tag once merged.
-  STELLAR_CLI_REV: c319deabcc859648d90accd22159305fd23d16e5
   WASMS_REPO: stellar-experimental/contract-wasms
 
 jobs:
@@ -78,28 +75,11 @@ jobs:
             "https://raw.githubusercontent.com/${WASMS_REPO}/main/${FILE}" \
             -o /tmp/wasm/contract.wasm
 
-      - name: Cache stellar-cli
-        id: cache-cli
-        uses: actions/cache@v4
-        with:
-          path: ~/.cargo/bin/stellar
-          key: stellar-cli-${{ env.STELLAR_CLI_REV }}
-
-      - name: Install stellar-cli
-        if: steps.cache-cli.outputs.cache-hit != 'true'
-        run: |
-          # Deps mirror stellar-cli's install.sh `--install-deps` apt list
-          # (https://github.com/stellar/stellar-cli/raw/main/install.sh).
-          # install.sh itself can't be used here because it pulls the latest
-          # release tarball, which doesn't yet include the `build verify`
-          # subcommand from PR #2525.
-          sudo apt-get update
-          sudo apt-get install -y \
-            libdbus-1-dev libudev-dev pkg-config libssl-dev build-essential
-          cargo install --locked \
-            --git https://github.com/stellar/stellar-cli \
-            --rev "${STELLAR_CLI_REV}" \
-            stellar-cli
+      # Install a baseline stellar-cli (latest release prebuilt) just so we can
+      # read the wasm's meta. The cliver-matched binary installed below shadows
+      # this one on PATH for the actual verify step.
+      - name: Install baseline stellar-cli
+        run: curl -fsSL https://github.com/stellar/stellar-cli/raw/main/install.sh | sh
 
       - name: Read wasm meta
         id: meta
@@ -111,6 +91,13 @@ jobs:
           meta_json=$(jq -c 'map({(.sc_meta_v0.key): .sc_meta_v0.val}) | add // {}' <<<"$raw")
           source_repo=$(jq -r '.source_repo // ""' <<<"$meta_json")
           source_rev=$(jq -r '.source_rev // ""' <<<"$meta_json")
+          # cliver format: "<pkg-version>#<git-describe-or-sha>". Extract the
+          # SHA after the last "-g" (git-describe form) or the suffix as-is.
+          cliver=$(jq -r '.cliver // ""' <<<"$meta_json")
+          ref=${cliver#*#}
+          case "$ref" in
+            *-g*) ref=${ref##*-g} ;;
+          esac
           {
             echo "meta_json<<META_EOF"
             echo "$meta_json"
@@ -118,6 +105,32 @@ jobs:
           } >> "$GITHUB_OUTPUT"
           echo "source_repo=$source_repo" >> "$GITHUB_OUTPUT"
           echo "source_rev=$source_rev" >> "$GITHUB_OUTPUT"
+          echo "cliver_ref=$ref" >> "$GITHUB_OUTPUT"
+
+      - name: Cache stellar-cli matching cliver
+        if: steps.meta.outputs.cliver_ref != ''
+        id: cache-cli
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/stellar
+          key: stellar-cli-cliver-${{ steps.meta.outputs.cliver_ref }}
+
+      - name: Install stellar-cli matching cliver
+        if: steps.meta.outputs.cliver_ref != '' && steps.cache-cli.outputs.cache-hit != 'true'
+        env:
+          CLIVER_REF: ${{ steps.meta.outputs.cliver_ref }}
+        run: |
+          # Deps mirror stellar-cli's install.sh `--install-deps` apt list.
+          sudo apt-get update
+          sudo apt-get install -y \
+            libdbus-1-dev libudev-dev pkg-config libssl-dev build-essential
+          # Full clone (vs. `cargo install --git --rev`) so the local repo has
+          # tags. crate-git-revision's `git describe` consults tags to produce
+          # the cliver suffix; without them the embedded version is just the
+          # bare SHA and won't match the wasm's recorded cliver.
+          git clone https://github.com/stellar/stellar-cli /tmp/stellar-cli-src
+          git -C /tmp/stellar-cli-src checkout "$CLIVER_REF"
+          cargo install --locked --path /tmp/stellar-cli-src/cmd/stellar-cli
 
       - name: Clone source
         id: clone
