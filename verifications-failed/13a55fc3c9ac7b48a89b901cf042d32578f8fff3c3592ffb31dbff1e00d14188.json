@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "13a55fc3c9ac7b48a89b901cf042d32578f8fff3c3592ffb31dbff1e00d14188",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25150719793",
+  "meta": {
+    "Version": "1.0.0",
+    "Description": "Gas-optimized circular arb aggregator",
+    "rsver": "1.92.0",
+    "rssdkver": "25.3.1#e50d95af029c83196dd122f0154bac3f1302394b"
+  }
+}

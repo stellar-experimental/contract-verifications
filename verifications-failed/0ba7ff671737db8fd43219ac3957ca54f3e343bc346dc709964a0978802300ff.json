@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "0ba7ff671737db8fd43219ac3957ca54f3e343bc346dc709964a0978802300ff",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25150719793",
+  "meta": {
+    "name": "YLDS Controller",
+    "description": "Figure YLDS Stellar controller: owner-gated mint/burn via SAC, replay keys, upgradeable.",
+    "rsver": "1.94.0",
+    "rssdkver": "23.5.3#d3e1ab2424388b10893b796b0c8e405c5edd03d2"
+  }
+}
