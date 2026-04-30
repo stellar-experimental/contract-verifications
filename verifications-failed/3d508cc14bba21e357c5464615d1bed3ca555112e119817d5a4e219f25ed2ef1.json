@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "3d508cc14bba21e357c5464615d1bed3ca555112e119817d5a4e219f25ed2ef1",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25152740935",
+  "meta": {
+    "rsver": "1.92.0",
+    "rssdkver": "23.3.0#a35990025247146e24cb9e1deda063f17f3e441d",
+    "source_repo": "batublockdev/V3_ONEXT",
+    "home_domain": "awesome.com"
+  }
+}

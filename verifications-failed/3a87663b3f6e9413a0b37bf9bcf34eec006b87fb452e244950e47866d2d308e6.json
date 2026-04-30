@@ -1,0 +1,14 @@
+{
+  "wasm-hash": "3a87663b3f6e9413a0b37bf9bcf34eec006b87fb452e244950e47866d2d308e6",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25152740935",
+  "meta": {
+    "Version": "0.1.0",
+    "Description": "ERC-8004 Identity Registry",
+    "rsver": "1.96.0-nightly",
+    "rssdkver": "25.3.0#dcbea44513feb7734af6b6c4aced2c4a7a2715d0",
+    "rssdk_spec_shaking": "2",
+    "cliver": "25.2.0#"
+  }
+}

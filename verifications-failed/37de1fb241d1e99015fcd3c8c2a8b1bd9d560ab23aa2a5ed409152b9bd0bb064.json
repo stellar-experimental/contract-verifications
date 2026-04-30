@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "37de1fb241d1e99015fcd3c8c2a8b1bd9d560ab23aa2a5ed409152b9bd0bb064",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25152740935",
+  "meta": {
+    "Version": "1.0.0",
+    "Description": "Gas-efficient circular arb router with flash loans",
+    "rsver": "1.92.0",
+    "rssdkver": "25.3.0#dcbea44513feb7734af6b6c4aced2c4a7a2715d0"
+  }
+}
