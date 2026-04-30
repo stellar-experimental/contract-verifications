@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "f60d33ec57eecee04b52d048c1c079983ff1b3834c8195fea811b025fb889361",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25167236252",
+  "meta": {
+    "rsver": "1.83.0",
+    "rssdkver": "22.0.2#31b2892ef4d20538004e52713cb81e4895a8de9a",
+    "source_repo": "github:reflector-network/reflector-dao-contract",
+    "home_domain": "reflector.network"
+  }
+}

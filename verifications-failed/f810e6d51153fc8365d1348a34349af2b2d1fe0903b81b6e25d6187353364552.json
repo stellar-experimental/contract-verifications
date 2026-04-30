@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "f810e6d51153fc8365d1348a34349af2b2d1fe0903b81b6e25d6187353364552",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25167236252",
+  "meta": {
+    "title": "KALE Batch Tractor - Full Lifecycle",
+    "desc": "Batch operations for plant, work, and harvest - reduces transactions by 90%",
+    "binver": "3.0.0",
+    "rsver": "1.90.0",
+    "rssdkver": "23.0.3#6aa930b08eabfd578b7824a0d5de473cbd958282"
+  }
+}

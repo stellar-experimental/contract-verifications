@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "f6c3f33b72b71f0ccc24e508c3e6cbd825bc74e590255bd09713865b087880c0",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25167236252",
+  "meta": {
+    "Debwewin UserId": "Hashed UserDetails",
+    "rsver": "1.81.0",
+    "rssdkver": "22.0.3#5a3ca3afe8f995c8e04a06656ff037ebaf545704"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "f0687241de338157d674a775ffe3e82e5e28f851b88208e1c3ef783848df84aa",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25167236252",
+  "meta": {
+    "assdkver": "0.2.5",
+    "name": "contract_b",
+    "version": "0.4.0",
+    "description": "the contract that calls the other contract"
+  }
+}
