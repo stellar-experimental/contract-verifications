@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "453d43574d387319d477c387d6452d6862305fa0ccbcc29b0ca5b68e2f6ff87a",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25157543325",
+  "meta": {
+    "desc": "Huma V2 Pool Credit Storage",
+    "rsver": "1.77.2",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}

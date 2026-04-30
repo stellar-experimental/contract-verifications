@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "4041cbdd8d7d1b700e6b24afb0b40a59aef67f36459782dbd32da381e02a63a3",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25157543325",
+  "meta": {
+    "rsver": "1.86.0",
+    "rssdkver": "22.0.4#1d4afb3b981a4f4b2bbc19f0ce38af85c4ab316a",
+    "name": "registry",
+    "binver": "0.1.0",
+    "authors": "Aha Labs <hello@ahalabs.dev>"
+  }
+}
