@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "9c6d98820f17229236d4f7be9c49204f12192b30bf94094c8c8c7c8389adecef",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25164469273",
+  "meta": {
+    "Description": "Tansu - Soroban Versioning",
+    "rsver": "1.90.0",
+    "rssdkver": "23.0.3#6aa930b08eabfd578b7824a0d5de473cbd958282",
+    "source_repo": "tupui/soroban-versioning",
+    "home_domain": "tansu.dev"
+  }
+}

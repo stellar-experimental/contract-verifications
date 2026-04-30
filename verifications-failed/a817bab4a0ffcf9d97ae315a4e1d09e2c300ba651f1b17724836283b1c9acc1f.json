@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "a817bab4a0ffcf9d97ae315a4e1d09e2c300ba651f1b17724836283b1c9acc1f",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25164469273",
+  "meta": {
+    "rsver": "1.82.0",
+    "rssdkver": "21.7.6#c6cca8f8cf75618c24ceb5d9ffdfe735486ae1e9",
+    "source_repo": "github:reflector-network/reflector-subscription-contract"
+  }
+}

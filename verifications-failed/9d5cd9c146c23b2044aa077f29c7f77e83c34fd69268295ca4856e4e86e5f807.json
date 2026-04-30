@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "9d5cd9c146c23b2044aa077f29c7f77e83c34fd69268295ca4856e4e86e5f807",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25164469273",
+  "meta": {
+    "assdkver": "1.0.0",
+    "name": "events",
+    "version": "1.0.0",
+    "description": "soroban contract example publishing events"
+  }
+}

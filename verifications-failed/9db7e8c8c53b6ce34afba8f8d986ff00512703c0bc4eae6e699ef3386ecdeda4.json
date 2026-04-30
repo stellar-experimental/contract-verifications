@@ -1,0 +1,16 @@
+{
+  "wasm-hash": "9db7e8c8c53b6ce34afba8f8d986ff00512703c0bc4eae6e699ef3386ecdeda4",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25164469273",
+  "meta": {
+    "rsver": "1.89.0",
+    "rssdkver": "23.0.3#6aa930b08eabfd578b7824a0d5de473cbd958282",
+    "authors": "The Aha Company <help@theaha.co>",
+    "binver": "0.0.0",
+    "contract": "true",
+    "name": "orchestrator",
+    "scaffold_version": "0.0.16",
+    "source_repo": "github:EquitXCompany/equitx-project"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "9f88e195c1dae60a9a47c380c1bffe48eec883bf331607f528ad0eda920cab09",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25164469273",
+  "meta": {
+    "desc": "Huma V2 Pool Manager",
+    "rsver": "1.77.2",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}
