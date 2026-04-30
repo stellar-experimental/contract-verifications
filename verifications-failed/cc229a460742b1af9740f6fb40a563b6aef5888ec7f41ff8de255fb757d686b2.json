@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "cc229a460742b1af9740f6fb40a563b6aef5888ec7f41ff8de255fb757d686b2",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25166394639",
+  "meta": {
+    "title": "KALE Salad",
+    "desc": "Combine your wonderful produce into a delightful, healthy salad NFT",
+    "binver": "1.1.1",
+    "rsver": "1.85.1",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}

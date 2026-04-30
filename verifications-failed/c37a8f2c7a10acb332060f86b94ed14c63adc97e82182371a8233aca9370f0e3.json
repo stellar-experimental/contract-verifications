@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "c37a8f2c7a10acb332060f86b94ed14c63adc97e82182371a8233aca9370f0e3",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25166394639",
+  "meta": {
+    "Description": "Tokens bonding curve factory",
+    "rsver": "1.84.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}

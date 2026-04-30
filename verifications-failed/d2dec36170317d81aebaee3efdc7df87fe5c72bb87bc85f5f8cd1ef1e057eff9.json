@@ -1,0 +1,16 @@
+{
+  "wasm-hash": "d2dec36170317d81aebaee3efdc7df87fe5c72bb87bc85f5f8cd1ef1e057eff9",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25166394639",
+  "meta": {
+    "rsver": "1.89.0",
+    "rssdkver": "23.1.1#f4573f94c8f8c1972459a03fe589f116e38c4cf1",
+    "authors": "The Aha Company <help@theaha.co>",
+    "binver": "1.0.0",
+    "contract": "true",
+    "name": "xasset",
+    "scaffold_version": "0.0.18",
+    "source_repo": "github:EquitXCompany/equitx-project"
+  }
+}
