@@ -97,7 +97,10 @@ jobs:
         id: meta
         run: |
           set -euo pipefail
-          meta_json=$(stellar contract info meta --wasm /tmp/wasm/contract.wasm --output json) || meta_json='{}'
+          # `--output json` returns: [{"sc_meta_v0": {"key": "...", "val": "..."}}, ...]
+          # Normalize to a flat object: {"key": "val", ...}
+          raw=$(stellar contract info meta --wasm /tmp/wasm/contract.wasm --output json) || raw='[]'
+          meta_json=$(jq -c 'map({(.sc_meta_v0.key): .sc_meta_v0.val}) | add // {}' <<<"$raw")
           source_repo=$(jq -r '.source_repo // ""' <<<"$meta_json")
           source_rev=$(jq -r '.source_rev // ""' <<<"$meta_json")
           {
