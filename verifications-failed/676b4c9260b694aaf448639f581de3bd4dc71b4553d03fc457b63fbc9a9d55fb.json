@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "676b4c9260b694aaf448639f581de3bd4dc71b4553d03fc457b63fbc9a9d55fb",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25159686737",
+  "meta": {
+    "desc": "A snooker game contract with pool physics validation, optional payments and rewards, on Soroban.",
+    "rsver": "1.74.0",
+    "rssdkver": "20.3.2#1d7f9bd8030f69070634bfb07394339824ceb399"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "663350a90dc668a16f3ff923929756a8724e42d7b09955d338a2e2203121bd8a",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25159686737",
+  "meta": {
+    "Description": "A DeFi primitive for financial derivatives using long and short tokens",
+    "rsver": "1.86.0",
+    "rssdkver": "22.0.8#f46e9e0610213bbb72285566f9dd960ff96d03d8"
+  }
+}

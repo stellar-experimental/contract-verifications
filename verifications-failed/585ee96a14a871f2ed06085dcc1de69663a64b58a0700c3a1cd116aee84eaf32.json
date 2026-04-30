@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "585ee96a14a871f2ed06085dcc1de69663a64b58a0700c3a1cd116aee84eaf32",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25159686737",
+  "meta": {
+    "Description": "Senior tranche (first payout) backstop fund to cover pool liquidity deficits using protocol revenue",
+    "rsver": "1.86.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}
