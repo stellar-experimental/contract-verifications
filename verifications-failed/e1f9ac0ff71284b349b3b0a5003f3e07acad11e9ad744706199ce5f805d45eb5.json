@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "e1f9ac0ff71284b349b3b0a5003f3e07acad11e9ad744706199ce5f805d45eb5",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25167128642",
+  "meta": {
+    "Description": "Phoenix Protocol Factory",
+    "rsver": "1.75.0",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}

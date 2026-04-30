@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "dec58db6464410b15bbed473e0aa5fb616cb9f6b6aea379ae392cb8ebf9670c8",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25167128642",
+  "meta": {
+    "rsver": "1.88.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8",
+    "source_repo": "freelii/passkey-kit"
+  }
+}

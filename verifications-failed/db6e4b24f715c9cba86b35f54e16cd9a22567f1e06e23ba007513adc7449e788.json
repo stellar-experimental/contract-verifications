@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "db6e4b24f715c9cba86b35f54e16cd9a22567f1e06e23ba007513adc7449e788",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25167128642",
+  "meta": {
+    "Version": "0.3.0",
+    "Description": "Flash loan arb receiver for Blend Protocol v2",
+    "rsver": "1.92.0",
+    "rssdkver": "22.0.11#34f7f53ae31e0fd02aab436a9872e79fa671ca02"
+  }
+}
