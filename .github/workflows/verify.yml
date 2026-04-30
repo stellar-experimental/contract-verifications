@@ -124,13 +124,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y \
             libdbus-1-dev libudev-dev pkg-config libssl-dev build-essential
-          # Full clone (vs. `cargo install --git --rev`) so the local repo has
-          # tags. crate-git-revision's `git describe` consults tags to produce
-          # the cliver suffix; without them the embedded version is just the
-          # bare SHA and won't match the wasm's recorded cliver.
-          git clone https://github.com/stellar/stellar-cli /tmp/stellar-cli-src
-          git -C /tmp/stellar-cli-src checkout "$CLIVER_REF"
-          cargo install --locked --path /tmp/stellar-cli-src/cmd/stellar-cli
+          # `cargo install --git --rev` embeds the full git-describe form
+          # (e.g. `v20.0.0-836-g<sha>`) into the binary's version, matching
+          # the wasm's `cliver` meta. Building from a local `git clone` via
+          # `cargo install --path` instead embeds only the bare SHA, which
+          # the verify command rejects as a cliver mismatch.
+          cargo install --locked \
+            --git https://github.com/stellar/stellar-cli \
+            --rev "$CLIVER_REF" \
+            stellar-cli
 
       - name: Clone source
         id: clone
