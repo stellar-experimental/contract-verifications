@@ -33,7 +33,7 @@ jobs:
           shopt -s nullglob
           for f in /tmp/wasms/contracts/*.wasm; do
             hash=$(sha256sum "$f" | cut -d' ' -f1)
-            if [ -f "verifications/${hash}.json" ]; then
+            if [ -f "verifications/${hash}.json" ] || [ -f "verifications-failed/${hash}.json" ]; then
               continue
             fi
             rel=${f#/tmp/wasms/}
@@ -191,20 +191,24 @@ jobs:
           pattern: verification-*
           path: /tmp/artifacts
           merge-multiple: true
-      - name: Move records into verifications/
+      - name: Sort records into verifications/ and verifications-failed/
         run: |
           set -euo pipefail
-          mkdir -p verifications
+          mkdir -p verifications verifications-failed
           shopt -s nullglob
           for f in /tmp/artifacts/*.json; do
-            cp "$f" "verifications/$(basename "$f")"
+            if [ "$(jq -r '.["build-verified"]' "$f")" = "true" ]; then
+              cp "$f" "verifications/$(basename "$f")"
+            else
+              cp "$f" "verifications-failed/$(basename "$f")"
+            fi
           done
       - name: Commit and push
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add verifications/
+          git add verifications/ verifications-failed/
           if git diff --cached --quiet; then
             echo "No new verification records to commit"
             exit 0

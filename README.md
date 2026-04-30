@@ -10,7 +10,7 @@ This repository runs a daily build-verification of Stellar contracts and records
 A scheduled GitHub workflow ([`.github/workflows/verify.yml`](.github/workflows/verify.yml)) runs daily and:
 
 1. Clones [`stellar-experimental/contract-wasms`](https://github.com/stellar-experimental/contract-wasms) and computes the sha256 of each `.wasm` in `contracts/`.
-2. Skips any wasm that already has a record in `verifications/<hash>.json`.
+2. Skips any wasm that already has a record in `verifications/<hash>.json` or `verifications-failed/<hash>.json`.
 3. For each remaining wasm, in an isolated matrix job with no token permissions:
    - Reads the wasm's contract metadata (looks up `source_repo` and `source_rev`).
    - Clones the source at that revision.
@@ -20,7 +20,7 @@ A scheduled GitHub workflow ([`.github/workflows/verify.yml`](.github/workflows/
 
 ## Record format
 
-Each verification produces `verifications/<hash>.json`:
+Successful verifications go to `verifications/<hash>.json`. Failed ones go to `verifications-failed/<hash>.json`:
 
 ```json
 {
