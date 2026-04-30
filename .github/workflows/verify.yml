@@ -80,6 +80,8 @@ jobs:
       - name: Install stellar-cli
         if: steps.cache-cli.outputs.cache-hit != 'true'
         run: |
+          sudo apt-get update
+          sudo apt-get install -y libdbus-1-dev pkg-config
           cargo install --locked \
             --git https://github.com/stellar/stellar-cli \
             --rev "${STELLAR_CLI_REV}" \
