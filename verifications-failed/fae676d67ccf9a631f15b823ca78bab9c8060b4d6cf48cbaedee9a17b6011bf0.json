@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "fae676d67ccf9a631f15b823ca78bab9c8060b4d6cf48cbaedee9a17b6011bf0",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25219380124",
+  "meta": {
+    "rsver": "1.88.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8",
+    "source_repo": "JoseCToscano/passkey-kit"
+  }
+}

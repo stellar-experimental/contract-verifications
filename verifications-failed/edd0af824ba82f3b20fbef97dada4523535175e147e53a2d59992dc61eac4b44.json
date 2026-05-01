@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "edd0af824ba82f3b20fbef97dada4523535175e147e53a2d59992dc61eac4b44",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25219380124",
+  "meta": {
+    "Description": "Stable Swap AMM for set of tokens",
+    "rsver": "1.94.1",
+    "rssdkver": "25.3.0#dcbea44513feb7734af6b6c4aced2c4a7a2715d0",
+    "cliver": "25.1.0#a048a57a75762458b487052e0021ea704a926bee",
+    "source_repo": "github:AquaToken/soroban-amm"
+  }
+}

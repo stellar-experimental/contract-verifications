@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "eae2b0a3a2c1430f7348e1586bb3e0217b8c961c0d0962bad4cbe578a3a09bca",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25219380124",
+  "meta": {
+    "Description": "Constant product AMM with configurable swap fee",
+    "rsver": "1.76.0",
+    "rssdkver": "20.3.2#1d7f9bd8030f69070634bfb07394339824ceb399"
+  }
+}

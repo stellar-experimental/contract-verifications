@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "f66d4fe7573273cf05388390e12974f72f40d70f7f977d9942042ab9a0f1b842",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25219380124",
+  "meta": {
+    "rsver": "1.93.1",
+    "rssdkver": "25.1.1#94c2a3b3a5ded6b9cf9cef0c207bf8804f3eb294",
+    "source_repo": "github:paltalabs/defindex-distributor"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "f11078394fd06b3992b4274611a7c47809707bdce61254cffa6dd40fcaad364f",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25219380124",
+  "meta": {
+    "binver": "1.0.0",
+    "rsver": "1.85.0",
+    "rssdkver": "22.0.8#f46e9e0610213bbb72285566f9dd960ff96d03d8",
+    "source_repo": "solv-finance/SolvBTC-Stellar-Contract"
+  }
+}
