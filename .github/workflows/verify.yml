@@ -18,7 +18,7 @@ defaults:
 env:
   # Pin stellar-cli to the head of stellar/stellar-cli#2525 (build verify command).
   # Bump this SHA as the PR is updated, or replace with a release tag once merged.
-  STELLAR_CLI_REV: 5adb3d4f05ac9dd621e2e6052371d4ab76ad1f2d
+  STELLAR_CLI_REV: cd443d226c6cde2799b59c18e39f0db31412e996
   WASMS_REPO: stellar-experimental/contract-wasms
 
 jobs:
