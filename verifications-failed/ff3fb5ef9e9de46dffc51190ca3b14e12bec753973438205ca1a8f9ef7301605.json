@@ -1,0 +1,17 @@
+{
+  "wasm-hash": "ff3fb5ef9e9de46dffc51190ca3b14e12bec753973438205ca1a8f9ef7301605",
+  "build-verified": false,
+  "error": "ℹ️  Loading contract from file...\n    Original wasm hash: ff3fb5ef9e9de46dffc51190ca3b14e12bec753973438205ca1a8f9ef7301605\n    stellar-cli version: 26.0.0#v20.0.0-835-gc319deabcc859648d90accd22159305fd23d16e5\n    rust version: 1.95.0\n    Docker image: docker.io/library/rust@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a\n    Manifest path: increment/Cargo.toml\n    Package: soroban-increment-contract\n    Profile: release\nℹ️  Pulling from library/rust\n    Digest: sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a\n    Status: Downloaded newer image for rust@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a\nℹ️  contract build --manifest-path /source/increment/Cargo.toml --profile release --locked --meta bldimg=docker.io/library/rust@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a --package soroban-increment-contract --meta source_repo=https://github.com/stellar/soroban-examples --meta source_rev=7b168174ae1268dab91a0190d80a94ab7ff41b59 --meta bldopt_profile=release --meta bldopt_package=soroban-increment-contract --meta bldopt_manifest_path=increment/Cargo.toml\n❌ error: docker run: Docker responded with status code 400: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: \"stellar\": executable file not found in $PATH",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25219696594",
+  "meta": {
+    "rsver": "1.95.0",
+    "rssdkver": "25.1.0#86c50a1ea4f87b40add3064ff9df95c7553565c5",
+    "cliver": "26.0.0#v20.0.0-835-gc319deabcc859648d90accd22159305fd23d16e5",
+    "bldimg": "docker.io/library/rust@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a",
+    "source_repo": "https://github.com/stellar/soroban-examples",
+    "source_rev": "7b168174ae1268dab91a0190d80a94ab7ff41b59",
+    "bldopt_manifest_path": "increment/Cargo.toml",
+    "bldopt_package": "soroban-increment-contract",
+    "bldopt_profile": "release"
+  }
+}
