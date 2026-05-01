@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "c6f97f7c742a1752fdfcbc221ca806d67a9eb1d91a1364c3d662552c74de041a",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218800151",
+  "meta": {
+    "desc": "Huma protocol-level configurations",
+    "rsver": "1.79.0",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}

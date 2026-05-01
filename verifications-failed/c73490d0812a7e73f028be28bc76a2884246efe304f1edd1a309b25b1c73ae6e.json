@@ -1,0 +1,10 @@
+{
+  "wasm-hash": "c73490d0812a7e73f028be28bc76a2884246efe304f1edd1a309b25b1c73ae6e",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218800151",
+  "meta": {
+    "rsver": "1.93.1",
+    "rssdkver": "23.1.1#f4573f94c8f8c1972459a03fe589f116e38c4cf1"
+  }
+}
