@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "e1429fb1b8de1085194cdfab86b8c94ae36003d0b0e5525d286794f9fbb762f8",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218849098",
+  "meta": {
+    "Description": "Smart contract for Chaincerts Vault",
+    "rsver": "1.76.0",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}

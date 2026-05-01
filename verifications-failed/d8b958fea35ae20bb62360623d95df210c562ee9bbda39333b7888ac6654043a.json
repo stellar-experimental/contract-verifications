@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "d8b958fea35ae20bb62360623d95df210c562ee9bbda39333b7888ac6654043a",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218849098",
+  "meta": {
+    "Description": "Smart Contract to issue, transfer, verify, and revoke Verifiable Credentials (VCs).",
+    "rsver": "1.89.0",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}
