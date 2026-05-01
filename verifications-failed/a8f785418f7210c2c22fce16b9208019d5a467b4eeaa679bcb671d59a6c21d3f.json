@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "a8f785418f7210c2c22fce16b9208019d5a467b4eeaa679bcb671d59a6c21d3f",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218656795",
+  "meta": {
+    "desc": "Splitter contract is used to distribute tokens to shareholders with predefined shares.",
+    "rsver": "1.91.1",
+    "rssdkver": "23.5.2#347f71141ddf69ef1873527c94ac98e79215f125"
+  }
+}

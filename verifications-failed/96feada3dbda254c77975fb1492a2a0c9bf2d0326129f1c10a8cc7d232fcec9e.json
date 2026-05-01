@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "96feada3dbda254c77975fb1492a2a0c9bf2d0326129f1c10a8cc7d232fcec9e",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218656795",
+  "meta": {
+    "assdkver": "0.4.0",
+    "name": "readme",
+    "version": "0.0.1",
+    "description": "hi! call the readme function!"
+  }
+}

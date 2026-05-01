@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "a71a844eec784d1a5ef201bbbd4c641980900fc128cb927b7c07720f7ae48cab",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218656795",
+  "meta": {
+    "rsver": "1.92.0",
+    "rssdkver": "23.4.1#e671b396f8bacf1370925f722df158b31c0baae5",
+    "source_repo": "github:zenith-protocols/orbit-contracts"
+  }
+}
