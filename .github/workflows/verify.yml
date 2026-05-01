@@ -122,6 +122,13 @@ jobs:
           mkdir -p "$HOME/.cargo/bin"
           mv /tmp/cli/stellar "$HOME/.cargo/bin/stellar"
           chmod +x "$HOME/.cargo/bin/stellar"
+          # Verify's docker backend bind-mounts host's ~/.cargo/registry into
+          # the container. Since this job didn't `cargo install` (the binary
+          # came from an artifact), the dir doesn't exist on the host; docker
+          # would auto-create it as root and the in-container uid-1001 process
+          # can't write to it. Pre-create it so docker mounts an existing,
+          # runner-owned directory.
+          mkdir -p "$HOME/.cargo/registry"
 
       - name: Read wasm meta
         id: meta
