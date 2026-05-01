@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "b9984bb4355dc0502e9bf2447a9b821b93649285d8d56a1a11fa51e9060d06d0",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218715243",
+  "meta": {
+    "rsver": "1.82.0",
+    "rssdkver": "21.7.7#5da789c50b18a4c2be53394138212fed56f0dfc4",
+    "source_repo": "github:reflector-network/reflector-aqua-pool-proxy-contract"
+  }
+}

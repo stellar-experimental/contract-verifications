@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "ad90cc26d514c44201d890ae5e61a0145dffd19dca3a7072c50b078b5e9fa213",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218715243",
+  "meta": {
+    "Description": "Stable Swap AMM for set of tokens",
+    "rsver": "1.87.0",
+    "rssdkver": "22.0.6#0c47dcfa187069d241f11fb082730f667b55e802"
+  }
+}

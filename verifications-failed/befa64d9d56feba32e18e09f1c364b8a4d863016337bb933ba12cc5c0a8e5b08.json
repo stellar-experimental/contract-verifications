@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "befa64d9d56feba32e18e09f1c364b8a4d863016337bb933ba12cc5c0a8e5b08",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218715243",
+  "meta": {
+    "rsver": "1.95.0",
+    "rssdkver": "25.3.1#e50d95af029c83196dd122f0154bac3f1302394b",
+    "cliver": "25.1.0#a048a57a75762458b487052e0021ea704a926bee",
+    "source_repo": "github:skyhitz/hitz-gravity"
+  }
+}

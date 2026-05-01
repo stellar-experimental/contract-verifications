@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "b7b85a40d548ab3c95af5252bd238f33c1b4b8b20abec75fb72470ae57ae904b",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218715243",
+  "meta": {
+    "Description": "ACTA Unified Contract: Vault + Issuance (VC storage & status registry)",
+    "rsver": "1.89.0",
+    "rssdkver": "21.7.7#5da789c50b18a4c2be53394138212fed56f0dfc4"
+  }
+}

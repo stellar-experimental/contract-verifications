@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "b0fac63cdbb6f5b6287f33585db90ade921dc4b138fcdfecc6aa547c39450833",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218715243",
+  "meta": {
+    "stye": "Sytemap Coin for land tokenization",
+    "rsver": "1.83.0",
+    "rssdkver": "21.5.0#d40bd031c14fbd3d75cf4473486ef7ef15af3364"
+  }
+}

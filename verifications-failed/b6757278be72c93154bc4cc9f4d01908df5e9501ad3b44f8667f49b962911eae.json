@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "b6757278be72c93154bc4cc9f4d01908df5e9501ad3b44f8667f49b962911eae",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218715243",
+  "meta": {
+    "Description": "Access control contract",
+    "rsver": "1.84.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}
