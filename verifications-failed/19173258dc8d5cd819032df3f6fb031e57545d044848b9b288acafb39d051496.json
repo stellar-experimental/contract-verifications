@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "19173258dc8d5cd819032df3f6fb031e57545d044848b9b288acafb39d051496",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25216778357",
+  "meta": {
+    "rsver": "1.94.0",
+    "rssdkver": "25.1.1#94c2a3b3a5ded6b9cf9cef0c207bf8804f3eb294",
+    "source_repo": "lumenbro/soroban-policies"
+  }
+}

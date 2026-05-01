@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "1b6b75fa484e7b7ddbd6b485f9a29317af127618cd56afa86addc4ed7ea93316",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25216778357",
+  "meta": {
+    "rsver": "1.94.0",
+    "rssdkver": "25.0.2#59a2e01a26f9330f8d516690911cb2ca87a6f1b3",
+    "source_repo": "lumenbro/referral-rewards"
+  }
+}
