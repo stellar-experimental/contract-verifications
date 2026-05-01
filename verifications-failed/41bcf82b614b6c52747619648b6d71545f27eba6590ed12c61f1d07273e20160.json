@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "41bcf82b614b6c52747619648b6d71545f27eba6590ed12c61f1d07273e20160",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25217247764",
+  "meta": {
+    "rsver": "1.85.0",
+    "rssdkver": "23.0.2#a97daf8b07cdf24e9bd45e344db51a21b9ea77d3",
+    "source_repo": "redstone-finance/redstone-public-contracts"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "53985f16803f047fc075e9b00c763f9ff66551d21922848d7df77db7b746dd3f",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25217247764",
+  "meta": {
+    "Description": "Phoenix Protocol Token Vesting Contract",
+    "rsver": "1.75.0",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}

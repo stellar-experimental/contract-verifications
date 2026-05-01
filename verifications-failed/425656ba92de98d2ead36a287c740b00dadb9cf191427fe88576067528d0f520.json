@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "425656ba92de98d2ead36a287c740b00dadb9cf191427fe88576067528d0f520",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25217247764",
+  "meta": {
+    "rsver": "1.83.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8",
+    "source_repo": "github:FxDAO/FxDAO-SC"
+  }
+}

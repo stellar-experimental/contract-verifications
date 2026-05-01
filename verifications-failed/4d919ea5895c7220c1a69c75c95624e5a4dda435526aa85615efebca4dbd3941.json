@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "4d919ea5895c7220c1a69c75c95624e5a4dda435526aa85615efebca4dbd3941",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25217247764",
+  "meta": {
+    "Description": "Phoenix Protocol LP Share token staking",
+    "rsver": "1.78.0",
+    "rssdkver": "21.6.0#f57d2454e520ae11dc9c8d55db610557a24a556e"
+  }
+}

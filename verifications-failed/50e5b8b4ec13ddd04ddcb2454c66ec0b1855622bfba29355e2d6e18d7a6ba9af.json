@@ -1,0 +1,14 @@
+{
+  "wasm-hash": "50e5b8b4ec13ddd04ddcb2454c66ec0b1855622bfba29355e2d6e18d7a6ba9af",
+  "build-verified": false,
+  "error": "ℹ️  Loading contract from file...\n⚠️  wasm meta is missing build option entries: [\"bldopt_manifest_path\", \"bldopt_package\", \"bldopt_profile\"]. The build may not be reproducible — defaults will be used for missing options.\n    Original wasm hash: 50e5b8b4ec13ddd04ddcb2454c66ec0b1855622bfba29355e2d6e18d7a6ba9af\n    stellar-cli version: 26.0.0#v20.0.0-833-gd5fb1cb0226dfe4a1c79fd49a71667befa06b558\n    rust version: 1.95.0\n    Docker image: docker.io/library/rust@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a\n❌ error: `cargo metadata` exited with an error: info: syncing channel updates for stable-x86_64-unknown-linux-gnu\ninfo: latest update on 2026-04-16 for version 1.95.0 (59807616e 2026-04-14)\ninfo: removing previous version of component clippy\ninfo: removing previous version of component rustfmt\ninfo: removing previous version of component cargo\ninfo: removing previous version of component rust-std\ninfo: removing previous version of component rustc\ninfo: downloading 7 components\nerror: could not find `Cargo.toml` in `/tmp/source` or any parent directory",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25217247764",
+  "meta": {
+    "rsver": "1.95.0",
+    "rssdkver": "25.1.0#86c50a1ea4f87b40add3064ff9df95c7553565c5",
+    "cliver": "26.0.0#v20.0.0-833-gd5fb1cb0226dfe4a1c79fd49a71667befa06b558",
+    "bldimg": "docker.io/library/rust@sha256:a9cfb755b33f5bb872610cbdb25da61f527416b28fc9c052bbce4bef93e7799a",
+    "source_repo": "https://github.com/stellar/soroban-examples",
+    "source_rev": "7b168174ae1268dab91a0190d80a94ab7ff41b59"
+  }
+}

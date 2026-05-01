@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "3f2a02eea6c458c034fa5d2a9c57ce02ea8ade606cac8a8080afa443f6c4319d",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25217247764",
+  "meta": {
+    "Description": "Soroban Multisig Deployer Contract",
+    "rsver": "1.80.1",
+    "rssdkver": "21.6.0#f57d2454e520ae11dc9c8d55db610557a24a556e"
+  }
+}

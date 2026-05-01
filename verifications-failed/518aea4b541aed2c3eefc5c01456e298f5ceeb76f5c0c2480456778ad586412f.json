@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "518aea4b541aed2c3eefc5c01456e298f5ceeb76f5c0c2480456778ad586412f",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25217247764",
+  "meta": {
+    "Description": "Phoenix Protocol XYK Liquidity Pool",
+    "rsver": "1.80.1",
+    "rssdkver": "21.7.7#5da789c50b18a4c2be53394138212fed56f0dfc4"
+  }
+}
