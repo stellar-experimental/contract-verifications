@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "2fa0a01f0d14b3a3aad4b65d98dbc4d388e4e6b18165404d270a168d477cc06f",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25216999916",
+  "meta": {
+    "rsver": "1.93.1",
+    "rssdkver": "25.0.2#59a2e01a26f9330f8d516690911cb2ca87a6f1b3",
+    "source_repo": "github:FredericRezeau/xray-games",
+    "home_domain": "kyungj.in"
+  }
+}

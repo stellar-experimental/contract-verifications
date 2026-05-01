@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "39f1e78e3ba94e98344cb1bb23afa3176657156511d1c8e2d06c26310439e0aa",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25216999916",
+  "meta": {
+    "Description": "Factory for creating and interacting with Long Short Pair contracts",
+    "rsver": "1.86.0",
+    "rssdkver": "22.0.8#f46e9e0610213bbb72285566f9dd960ff96d03d8"
+  }
+}

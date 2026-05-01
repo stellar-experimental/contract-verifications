@@ -1,0 +1,14 @@
+{
+  "wasm-hash": "3d5bdfc11bc3a2602d18c9863471e7c9260534de95b9f5f488dc1dcdbdd6cdb7",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25216999916",
+  "meta": {
+    "Description": "Afreum Fiat Token Mint & Redeem Contract v0.1.0",
+    "home_domain": "afreum.com",
+    "source_repo": "github:Afreum/Afreum_Fiat_Mint_Redeem_Contract",
+    "rsver": "1.95.0",
+    "rssdkver": "22.0.11#34f7f53ae31e0fd02aab436a9872e79fa671ca02",
+    "cliver": "26.0.0#60f7458e7ecffddf2f2d91dc6d0d2db4fab03ecc"
+  }
+}

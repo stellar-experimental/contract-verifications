@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "3c2e6adf068becdaa7c55e195124ed2ea50b2e6533cdcf30d3ba103b87965ec3",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25216999916",
+  "meta": {
+    "Description": "Phoenix Protocol staking rewards distribution",
+    "rsver": "1.75.0",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}

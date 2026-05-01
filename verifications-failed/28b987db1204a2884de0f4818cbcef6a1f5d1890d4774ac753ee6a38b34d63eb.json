@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "28b987db1204a2884de0f4818cbcef6a1f5d1890d4774ac753ee6a38b34d63eb",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25216999916",
+  "meta": {
+    "Description": "Phoenix Multisig Contract",
+    "rsver": "1.80.1",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}
