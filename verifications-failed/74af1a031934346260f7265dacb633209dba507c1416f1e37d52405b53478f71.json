@@ -1,0 +1,14 @@
+{
+  "wasm-hash": "74af1a031934346260f7265dacb633209dba507c1416f1e37d52405b53478f71",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218469973",
+  "meta": {
+    "Description": "8004 Reputation Registry",
+    "Version": "0.1.0",
+    "rsver": "1.91.0-nightly",
+    "rssdkver": "25.3.0#dcbea44513feb7734af6b6c4aced2c4a7a2715d0",
+    "rssdk_spec_shaking": "2",
+    "cliver": "25.2.0#"
+  }
+}

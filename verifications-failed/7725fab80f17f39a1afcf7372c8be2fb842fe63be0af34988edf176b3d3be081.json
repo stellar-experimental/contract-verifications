@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "7725fab80f17f39a1afcf7372c8be2fb842fe63be0af34988edf176b3d3be081",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218469973",
+  "meta": {
+    "Description": "ChimpDAO Collection",
+    "rsver": "1.89.0",
+    "rssdkver": "25.0.2#59a2e01a26f9330f8d516690911cb2ca87a6f1b3",
+    "source_repo": "github:Consulting-Manao/chimpdao-contracts",
+    "home_domain": "nft.chimpdao.xyz"
+  }
+}
