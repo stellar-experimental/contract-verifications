@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "857f3a3c90e99dcf96584919775d44a21a5b13306a374585f8b7c070d7bfc565",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218558557",
+  "meta": {
+    "assdkver": "1.0.0",
+    "name": "hello word",
+    "version": "1.0.0",
+    "description": "my first contract"
+  }
+}

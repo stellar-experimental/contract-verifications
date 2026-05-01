@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "8b310c3a822d4157e327d8805597a53d6919a7c6a18481bded2daf65ff16cce3",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25218558557",
+  "meta": {
+    "Description": "RaumFi V2 DEX",
+    "rsver": "1.77.2",
+    "rssdkver": "20.5.0#9e2c3022b4355b224a7a814e13ba51761eeb14bb"
+  }
+}
