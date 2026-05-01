@@ -58,26 +58,12 @@ jobs:
             echo "has_work=false" >> "$GITHUB_OUTPUT"
           fi
 
-  verify:
+  build-cli:
     needs: discover
     if: needs.discover.outputs.has_work == 'true'
     runs-on: ubuntu-latest
     permissions: {}
-    strategy:
-      fail-fast: false
-      matrix:
-        item: ${{ fromJSON(needs.discover.outputs.matrix) }}
     steps:
-      - name: Download wasm
-        env:
-          FILE: ${{ matrix.item.file }}
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/wasm
-          curl -fsSL \
-            "https://raw.githubusercontent.com/${WASMS_REPO}/main/${FILE}" \
-            -o /tmp/wasm/contract.wasm
-
       - name: Cache stellar-cli
         id: cache-cli
         uses: actions/cache@v4
@@ -96,6 +82,46 @@ jobs:
             --git https://github.com/stellar/stellar-cli \
             --rev "${STELLAR_CLI_REV}" \
             stellar-cli
+
+      - name: Upload stellar-cli artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stellar-cli
+          path: ~/.cargo/bin/stellar
+          if-no-files-found: error
+          retention-days: 1
+
+  verify:
+    needs: [discover, build-cli]
+    if: needs.discover.outputs.has_work == 'true'
+    runs-on: ubuntu-latest
+    permissions: {}
+    strategy:
+      fail-fast: false
+      matrix:
+        item: ${{ fromJSON(needs.discover.outputs.matrix) }}
+    steps:
+      - name: Download wasm
+        env:
+          FILE: ${{ matrix.item.file }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/wasm
+          curl -fsSL \
+            "https://raw.githubusercontent.com/${WASMS_REPO}/main/${FILE}" \
+            -o /tmp/wasm/contract.wasm
+
+      - name: Download stellar-cli
+        uses: actions/download-artifact@v5
+        with:
+          name: stellar-cli
+          path: /tmp/cli
+
+      - name: Install stellar-cli to PATH
+        run: |
+          mkdir -p "$HOME/.cargo/bin"
+          mv /tmp/cli/stellar "$HOME/.cargo/bin/stellar"
+          chmod +x "$HOME/.cargo/bin/stellar"
 
       - name: Read wasm meta
         id: meta
