@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "66951f718a7bea5e52fe51e630190029805d5b43e7c80d56ebdd045671230582",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25217883074",
+  "meta": {
+    "Description": "A standardized oracle supporting multiple providers and risk measures",
+    "rsver": "1.86.0",
+    "rssdkver": "22.0.8#f46e9e0610213bbb72285566f9dd960ff96d03d8"
+  }
+}

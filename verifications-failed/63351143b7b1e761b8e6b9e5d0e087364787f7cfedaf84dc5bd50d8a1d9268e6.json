@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "63351143b7b1e761b8e6b9e5d0e087364787f7cfedaf84dc5bd50d8a1d9268e6",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25217883074",
+  "meta": {
+    "Description": "ChimpDAO NFC-NFT",
+    "rsver": "1.89.0",
+    "rssdkver": "25.0.2#59a2e01a26f9330f8d516690911cb2ca87a6f1b3",
+    "source_repo": "github:Consulting-Manao/chimpdao-contracts",
+    "home_domain": "nft.chimpdao.xyz"
+  }
+}
