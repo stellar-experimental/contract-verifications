@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "12f9e730332fe2b1ae1a210b58d3c72c59d337bdae3b7ec12fe67ae5aac27473",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25216181111",
+  "meta": {
+    "title": "KaleFail Tractor",
+    "desc": "Batch operations for your KALE farmers.",
+    "binver": "2.0.0",
+    "rsver": "1.85.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}

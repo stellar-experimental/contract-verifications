@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "022a412d636be65024ce1f0b4e92583a2c0cc3e42adeaedfbd8cdac14d8c8409",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25216181111",
+  "meta": {
+    "rsver": "1.93.1",
+    "rssdkver": "25.1.1#94c2a3b3a5ded6b9cf9cef0c207bf8804f3eb294",
+    "source_repo": "github:AquaToken/soroban-amm"
+  }
+}
