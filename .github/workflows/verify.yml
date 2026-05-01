@@ -16,6 +16,9 @@ defaults:
     shell: bash
 
 env:
+  # Pin stellar-cli to the head of stellar/stellar-cli#2525 (build verify command).
+  # Bump this SHA as the PR is updated, or replace with a release tag once merged.
+  STELLAR_CLI_REV: 5adb3d4f05ac9dd621e2e6052371d4ab76ad1f2d
   WASMS_REPO: stellar-experimental/contract-wasms
 
 jobs:
@@ -75,11 +78,24 @@ jobs:
             "https://raw.githubusercontent.com/${WASMS_REPO}/main/${FILE}" \
             -o /tmp/wasm/contract.wasm
 
-      # Install a baseline stellar-cli (latest release prebuilt) just so we can
-      # read the wasm's meta. The cliver-matched binary installed below shadows
-      # this one on PATH for the actual verify step.
-      - name: Install baseline stellar-cli
-        run: curl -fsSL https://github.com/stellar/stellar-cli/raw/main/install.sh | sh
+      - name: Cache stellar-cli
+        id: cache-cli
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/stellar
+          key: stellar-cli-${{ env.STELLAR_CLI_REV }}
+
+      - name: Install stellar-cli
+        if: steps.cache-cli.outputs.cache-hit != 'true'
+        run: |
+          # Deps mirror stellar-cli's install.sh `--install-deps` apt list.
+          sudo apt-get update
+          sudo apt-get install -y \
+            libdbus-1-dev libudev-dev pkg-config libssl-dev build-essential
+          cargo install --locked \
+            --git https://github.com/stellar/stellar-cli \
+            --rev "${STELLAR_CLI_REV}" \
+            stellar-cli
 
       - name: Read wasm meta
         id: meta
@@ -91,25 +107,6 @@ jobs:
           meta_json=$(jq -c 'map({(.sc_meta_v0.key): .sc_meta_v0.val}) | add // {}' <<<"$raw")
           source_repo=$(jq -r '.source_repo // ""' <<<"$meta_json")
           source_rev=$(jq -r '.source_rev // ""' <<<"$meta_json")
-          # cliver format: "<pkg-version>#<suffix>" where suffix shape encodes
-          # how stellar-cli was installed when the wasm was built:
-          #   ""                       -> homebrew  (no .git, no vcs_info)
-          #   "<40-hex>"               -> crates.io (vcs_info sha1)
-          #   "v<tag>-<n>-g<sha>..."   -> cargo install --git (git describe)
-          # We need our installed CLI's cliver to match this string exactly,
-          # so dispatch the install method based on the suffix shape.
-          cliver=$(jq -r '.cliver // ""' <<<"$meta_json")
-          pkg_version=${cliver%%#*}
-          suffix=${cliver#*#}
-          cli_install_method=""
-          cli_install_ref=""
-          if [ -n "$cliver" ]; then
-            case "$suffix" in
-              "")     cli_install_method=homebrew;  cli_install_ref=$pkg_version ;;
-              *-g*)   cli_install_method=git;       cli_install_ref=${suffix##*-g} ;;
-              *)      cli_install_method=crates-io; cli_install_ref=$pkg_version ;;
-            esac
-          fi
           {
             echo "meta_json<<META_EOF"
             echo "$meta_json"
@@ -117,52 +114,6 @@ jobs:
           } >> "$GITHUB_OUTPUT"
           echo "source_repo=$source_repo" >> "$GITHUB_OUTPUT"
           echo "source_rev=$source_rev" >> "$GITHUB_OUTPUT"
-          echo "cli_install_method=$cli_install_method" >> "$GITHUB_OUTPUT"
-          echo "cli_install_ref=$cli_install_ref" >> "$GITHUB_OUTPUT"
-
-      - name: Cache stellar-cli matching cliver
-        if: steps.meta.outputs.cli_install_method != ''
-        id: cache-cli
-        uses: actions/cache@v4
-        with:
-          path: ~/.cargo/bin/stellar
-          key: stellar-cli-${{ steps.meta.outputs.cli_install_method }}-${{ steps.meta.outputs.cli_install_ref }}
-
-      - name: Install stellar-cli matching cliver
-        if: steps.meta.outputs.cli_install_method != '' && steps.cache-cli.outputs.cache-hit != 'true'
-        env:
-          METHOD: ${{ steps.meta.outputs.cli_install_method }}
-          REF: ${{ steps.meta.outputs.cli_install_ref }}
-        run: |
-          # All three paths cargo-compile from source.
-          sudo apt-get update
-          sudo apt-get install -y \
-            libdbus-1-dev libudev-dev pkg-config libssl-dev build-essential
-          case "$METHOD" in
-            git)
-              # crate-git-revision's `git describe` of cargo's git checkout
-              # embeds `v<tag>-<n>-g<sha>` into GIT_REVISION.
-              cargo install --locked \
-                --git https://github.com/stellar/stellar-cli \
-                --rev "$REF" \
-                stellar-cli
-              ;;
-            crates-io)
-              # Crates.io tarball ships `.cargo_vcs_info.json`; build embeds
-              # the bare publish SHA — matches the wasm's bare-SHA cliver.
-              cargo install --locked "stellar-cli@${REF}"
-              ;;
-            homebrew)
-              # GitHub source tarball has no `.git` and no `.cargo_vcs_info.json`,
-              # so build embeds an empty GIT_REVISION — matches `<pkg>#` cliver.
-              curl -fsSL \
-                "https://github.com/stellar/stellar-cli/archive/refs/tags/v${REF}.tar.gz" \
-                -o /tmp/stellar.tar.gz
-              mkdir -p /tmp/stellar-src
-              tar -xzf /tmp/stellar.tar.gz -C /tmp/stellar-src --strip-components=1
-              cargo install --locked --path /tmp/stellar-src/cmd/stellar-cli
-              ;;
-          esac
 
       - name: Clone source
         id: clone
