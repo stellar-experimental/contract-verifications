@@ -1,0 +1,14 @@
+{
+  "wasm-hash": "83feef85dba5a6c1205daa685c66ebebdd6610c0057b1bac46dae8864cd2b113",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25755964829",
+  "meta": {
+    "Description": "Tansu",
+    "rsver": "1.95.0",
+    "rssdkver": "26.0.0#e1bf74ba6c3ddb591593f5eb5dfb85458ff714c1",
+    "cliver": "25.1.0#a048a57a75762458b487052e0021ea704a926bee",
+    "source_repo": "github:Consulting-Manao/tansu",
+    "home_domain": "tansu.dev"
+  }
+}
