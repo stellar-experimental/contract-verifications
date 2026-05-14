@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "b627c2ac57a01b522c79c26beaaad13ec427e4e2c15c378056e7d5a68986fe3e",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/25835902374",
+  "meta": {
+    "Description": "DobProtocol Crowdfunding V1 - Fixed price per share, on-chain escrow",
+    "rsver": "1.92.0",
+    "rssdkver": "23.4.0#673d6c4f2368d282d25da29bda55c21b8be69ca6",
+    "cliver": "23.4.1#a152ec2488c25136808ad28277c24b3a0765ffd4"
+  }
+}
