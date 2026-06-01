@@ -1,0 +1,14 @@
+{
+  "wasm-hash": "c546f901186fda4835141560a94e27100a6e1e59eed8f01b3b0c66d45eab08a4",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/26732186388",
+  "meta": {
+    "desc": "Splitter V2: Tokenized distribution with lazy claiming, time-gating, auto-scheduling, and DEX-tradeable participation tokens.",
+    "rsver": "1.96.0",
+    "rssdkver": "23.5.3#d3e1ab2424388b10893b796b0c8e405c5edd03d2",
+    "cliver": "25.1.0#a048a57a75762458b487052e0021ea704a926bee",
+    "source_repo": "github:Dobprotocol/stellar-distribution-contracts",
+    "home_domain": "dobprotocol.com"
+  }
+}
