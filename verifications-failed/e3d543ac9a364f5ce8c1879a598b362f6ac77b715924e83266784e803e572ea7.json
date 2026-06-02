@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "e3d543ac9a364f5ce8c1879a598b362f6ac77b715924e83266784e803e572ea7",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/26841278661",
+  "meta": {
+    "rsver": "1.94.0",
+    "rssdkver": "23.5.2#347f71141ddf69ef1873527c94ac98e79215f125",
+    "cliver": "25.1.0#a048a57a75762458b487052e0021ea704a926bee",
+    "source_repo": "https://github.com/copter-exchange/stellar_stablecoin"
+  }
+}
