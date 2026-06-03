@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "3e8f372ac26c0ab674c6da7b01bd237d4c6c89f34a3d353b0edbc72644f12364",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/26896588885",
+  "meta": {
+    "desc": "Splitter V2: Tokenized distribution with lazy claiming, time-gating, auto-scheduling, and DEX-tradeable participation tokens.",
+    "rsver": "1.91.1",
+    "rssdkver": "23.5.2#347f71141ddf69ef1873527c94ac98e79215f125"
+  }
+}
