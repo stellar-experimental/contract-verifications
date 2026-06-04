@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "12fca5a7a96577273b6d4184cf9c984036cda0e8f0594747e7b2933dced37ee6",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/26959468284",
+  "meta": {
+    "Description": "Concentrated liquidity pool inspired by Uniswap v3, adapted for Soroban",
+    "rsver": "1.96.0",
+    "rssdkver": "25.3.0#dcbea44513feb7734af6b6c4aced2c4a7a2715d0",
+    "cliver": "25.1.0#a048a57a75762458b487052e0021ea704a926bee",
+    "source_repo": "github:AquaToken/soroban-amm"
+  }
+}
