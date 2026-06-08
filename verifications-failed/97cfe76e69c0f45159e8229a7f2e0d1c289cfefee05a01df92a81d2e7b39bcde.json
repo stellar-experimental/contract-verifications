@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "97cfe76e69c0f45159e8229a7f2e0d1c289cfefee05a01df92a81d2e7b39bcde",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/27112538675",
+  "meta": {
+    "rsver": "1.96.0",
+    "rssdkver": "22.0.9#3890521426d71bb4d892b21f5a283a1e836cfa38",
+    "source_repo": "lumenbro/LPdispurse",
+    "home_domain": "thelumenaire.com"
+  }
+}
