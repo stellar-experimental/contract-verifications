@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "202079983fe1fdfea29ef9aa08f38f3f349cb0e30fcbf993a5b4ca4dd33179e4",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/27520663144",
+  "meta": {
+    "License": "Boost Software License, Version 1.0.0",
+    "Version": "0.1.0",
+    "Description": "Stallion decentralized bounty platform",
+    "rsver": "1.95.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8"
+  }
+}
