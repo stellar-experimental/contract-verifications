@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "04c5d66dd19ea2b7328454f5972a2fc6a8fc13855fc430a11d14afd2782e8836",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/28087009146",
+  "meta": {
+    "rsver": "1.96.0",
+    "rssdkver": "23.5.3#d3e1ab2424388b10893b796b0c8e405c5edd03d2",
+    "cliver": "25.1.0#a048a57a75762458b487052e0021ea704a926bee",
+    "source_repo": "github:Matrixdock-RWA/RWA-Contracts"
+  }
+}
