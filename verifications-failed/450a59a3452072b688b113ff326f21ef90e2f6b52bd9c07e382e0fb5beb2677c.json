@@ -1,0 +1,14 @@
+{
+  "wasm-hash": "450a59a3452072b688b113ff326f21ef90e2f6b52bd9c07e382e0fb5beb2677c",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/28299848612",
+  "meta": {
+    "version": "0.1.0",
+    "description": "Boundless events contract: hackathon, bounty, grant + escrow",
+    "license": "MIT",
+    "rsver": "1.90.0",
+    "rssdkver": "23.5.3#d3e1ab2424388b10893b796b0c8e405c5edd03d2",
+    "cliver": "26.1.0#1228cff8022b804659750b94b315932b0e0f3f6a"
+  }
+}
