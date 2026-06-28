@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "f22e4a52893d04b277c79bd19b3ff0b8771e1c0ca396a35d9339dd3a027ae299",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/28308786138",
+  "meta": {
+    "version": "1.0.0",
+    "rsver": "1.85.0",
+    "rssdkver": "23.0.2#a97daf8b07cdf24e9bd45e344db51a21b9ea77d3",
+    "cliver": "25.1.0#a048a57a75762458b487052e0021ea704a926bee",
+    "source_repo": "github:Into-The-Block-Corp/StellarVaults"
+  }
+}
