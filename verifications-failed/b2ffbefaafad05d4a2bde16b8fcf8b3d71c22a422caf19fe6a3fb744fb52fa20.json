@@ -1,0 +1,12 @@
+{
+  "wasm-hash": "b2ffbefaafad05d4a2bde16b8fcf8b3d71c22a422caf19fe6a3fb744fb52fa20",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/28382671387",
+  "meta": {
+    "Description": "Contract to enable chaining of multiple swap transactions together",
+    "rsver": "1.81.0",
+    "rssdkver": "22.0.7#211569aa49c8d896877dfca1f2eb4fe9071121c8",
+    "cliver": "25.2.0#28484880988199233a7e8e87c97cb12dac323cb3"
+  }
+}
