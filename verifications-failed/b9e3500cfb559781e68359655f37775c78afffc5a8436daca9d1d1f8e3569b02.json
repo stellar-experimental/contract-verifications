@@ -1,0 +1,14 @@
+{
+  "wasm-hash": "b9e3500cfb559781e68359655f37775c78afffc5a8436daca9d1d1f8e3569b02",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/28399159506",
+  "meta": {
+    "version": "1.1.0",
+    "description": "Boundless profile contract: reputation + earnings",
+    "license": "MIT",
+    "rsver": "1.90.0",
+    "rssdkver": "23.5.3#d3e1ab2424388b10893b796b0c8e405c5edd03d2",
+    "cliver": "26.1.0#1228cff8022b804659750b94b315932b0e0f3f6a"
+  }
+}
