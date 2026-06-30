@@ -1,0 +1,11 @@
+{
+  "wasm-hash": "2bd0323a98acb8469606808368da6c79824f2dd8391494b94ddbeb3d22c1a957",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/28433881683",
+  "meta": {
+    "Description": "VC Vault: Verifiable Credential storage + issuance status registry",
+    "rsver": "1.93.0",
+    "rssdkver": "23.5.3#d3e1ab2424388b10893b796b0c8e405c5edd03d2"
+  }
+}
