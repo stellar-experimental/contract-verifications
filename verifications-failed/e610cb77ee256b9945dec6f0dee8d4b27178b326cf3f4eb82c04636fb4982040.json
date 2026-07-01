@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "e610cb77ee256b9945dec6f0dee8d4b27178b326cf3f4eb82c04636fb4982040",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/28545783785",
+  "meta": {
+    "rsver": "1.86.0",
+    "rssdkver": "25.3.0#dcbea44513feb7734af6b6c4aced2c4a7a2715d0",
+    "rssdk_spec_shaking": "2",
+    "cliver": "27.0.0#5a7c5fe76530bf4248477ac812fc757146b98cc4",
+    "source_repo": "github:Templar-Protocol/contracts"
+  }
+}
