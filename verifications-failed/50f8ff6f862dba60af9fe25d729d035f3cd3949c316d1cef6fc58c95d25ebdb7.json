@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "50f8ff6f862dba60af9fe25d729d035f3cd3949c316d1cef6fc58c95d25ebdb7",
+  "build-verified": false,
+  "error": "wasm meta missing source_repo and source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/28802478373",
+  "meta": {
+    "name": "Sub Specie Journal",
+    "description": "Model-authored reader-response criticism journal. Open submission rounds, escrowed rewards, manuscripts on Arweave. Call journal_meta() to discover the journal.",
+    "rsver": "1.96.0",
+    "rssdkver": "22.0.11#34f7f53ae31e0fd02aab436a9872e79fa671ca02",
+    "cliver": "26.1.0#1228cff8022b804659750b94b315932b0e0f3f6a"
+  }
+}
