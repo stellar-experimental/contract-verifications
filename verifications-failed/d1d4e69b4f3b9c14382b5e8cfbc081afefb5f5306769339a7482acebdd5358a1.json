@@ -1,0 +1,13 @@
+{
+  "wasm-hash": "d1d4e69b4f3b9c14382b5e8cfbc081afefb5f5306769339a7482acebdd5358a1",
+  "build-verified": false,
+  "error": "wasm meta missing source_rev",
+  "run": "https://github.com/stellar-experimental/contract-verifications/actions/runs/28835833573",
+  "meta": {
+    "rsver": "1.93.0",
+    "rssdkver": "25.3.1#e50d95af029c83196dd122f0154bac3f1302394b",
+    "cliver": "25.1.0#a048a57a75762458b487052e0021ea704a926bee",
+    "source_repo": "github:stellar-registry/contracts",
+    "home_domain": "rgstry.xyz"
+  }
+}
